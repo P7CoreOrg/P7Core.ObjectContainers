@@ -22,6 +22,8 @@ namespace ObjectCacheTests
         {
             services.AddObjectCache();
             services.AddScoped<MyScopedStringContainer>();
+            services.AddScoped<MySingletonStringContainer>();
+            
             services.AddScoped<MyScopedObjectTwo>();
             services.AddScoped<MyScopedObjectOne>();
             return services.BuildServiceProvider();

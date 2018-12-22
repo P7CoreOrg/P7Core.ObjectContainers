@@ -25,6 +25,11 @@ build:
   publish_nuget: true
   publish_nuget_symbols: true
 
+after_build:
+- ps: >-
+      .\Nuget\UpdateNuspecFiles.ps1 -Version "$env:appveyor_build_number"
+    
+      nuget pack Nuget\P7Core.ObjectCaches\P7Core.ObjectCaches.nuspec -Version "$env:appveyor_build_number" -Symbols
 assembly_info:
   patch: true
   file: AssemblyInfo.*

@@ -1,43 +1,34 @@
+Download appveyor.yml
 version: 1.0.{build}
+skip_branch_with_pr: true
 image: Visual Studio 2017
-configuration: Release
-init:
-    - cmd: git config --global core.autocrlf true
+assembly_info:
+  patch: true
+  file: '**\AssemblyInfo.*'
+  assembly_version: '{version}'
+  assembly_file_version: '{version}'
+  assembly_informational_version: '{version}'
 dotnet_csproj:
-  patch:  true
+  patch: true
   file: '**\*.csproj'
-  version:  '{version}'
+  version: '{version}'
   package_version: '{version}'
   assembly_version: '{version}'
   file_version: '{version}'
   informational_version: '{version}'
+environment:
+  solution_version: 1.0.0
 install:
 - cmd: appveyor DownloadFile https://dist.nuget.org/win-x86-commandline/v4.9.2/nuget.exe
-
 before_build:
 - cmd: >-
     dotnet --version
 
     dotnet restore ./src/P7Core.ObjectCaches.sln --verbosity m
 build:
-  project: ./src/P7Core.ObjectCaches.sln
   verbosity: minimal
-  publish_nuget: true
-  publish_nuget_symbols: true
-
 after_build:
-- ps: >-
-      .\Nuget\UpdateNuspecFiles.ps1 -Version "$env:appveyor_build_number"
-    
-      nuget pack Nuget\P7Core.ObjectCaches\P7Core.ObjectCaches.nuspec -Version "$env:appveyor_build_number" -Symbols
-assembly_info:
-  patch: true
-  file: AssemblyInfo.*
-  assembly_version: "{version}"
-  assembly_file_version: "{version}"
-  assembly_informational_version: "{version}"
-  
-#deploy:
-#- provider: NuGet
-#  api_key:
-#    secure: B/f51VFX8VlPydPBC8o0fhaoDnDY/nFwXF8rWtCaGSbjTs3iWh7nY6geUynibgJs
+- ps: nuget pack ./src/P7Core.ObjectCaches/P7Core.ObjectCaches.csproj -Version "$env:appveyor_build_version" -Symbols
+artifacts:
+- path: '*.nupkg'
+  name: nuget

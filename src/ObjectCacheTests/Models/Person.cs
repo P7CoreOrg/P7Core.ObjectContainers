@@ -1,10 +1,12 @@
+using System;
+
 namespace ObjectCacheTests.Models
 {
     public class Person
     {
         public Person()
         {
-            Name = "Donald Duck";
+            Name = Guid.NewGuid().ToString();
         }
         public string Name { get; set; }
     }

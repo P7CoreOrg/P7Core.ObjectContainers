@@ -1,0 +1,30 @@
+version: 1.0.0-nightly-{build}
+image: Visual Studio 2017
+configuration: Release
+init:
+    - cmd: git config --global core.autocrlf true
+dotnet_csproj:
+  patch:  true
+  file: '**\*.csproj'
+  version:  '{version}'
+  package_version: '{version}'
+  assembly_version: '{version}'
+  file_version: '{version}'
+  informational_version: '{version}'
+install:
+- cmd: appveyor DownloadFile https://dist.nuget.org/win-x86-commandline/v4.9.2/nuget.exe
+
+before_build:
+- cmd: >-
+    dotnet --version
+
+    dotnet restore ./src/P7Core.ObjectCaches.sln --verbosity m
+build:
+  project: ./src/P7Core.ObjectCaches.sln
+  verbosity: minimal
+  publish_nuget: true
+  
+#deploy:
+#- provider: NuGet
+#  api_key:
+#    secure: B/f51VFX8VlPydPBC8o0fhaoDnDY/nFwXF8rWtCaGSbjTs3iWh7nY6geUynibgJs

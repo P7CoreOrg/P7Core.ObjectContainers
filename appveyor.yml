@@ -1,4 +1,4 @@
-version: 1.0.0-nightly-{build}
+version: 1.0.{build}
 image: Visual Studio 2017
 configuration: Release
 init:
@@ -23,6 +23,14 @@ build:
   project: ./src/P7Core.ObjectCaches.sln
   verbosity: minimal
   publish_nuget: true
+  publish_nuget_symbols: true
+
+assembly_info:
+  patch: true
+  file: AssemblyInfo.*
+  assembly_version: "{version}"
+  assembly_file_version: "{version}"
+  assembly_informational_version: "{version}"
   
 #deploy:
 #- provider: NuGet

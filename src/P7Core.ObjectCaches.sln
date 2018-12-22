@@ -14,6 +14,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution", "Solution", "{2C
 		..\appveyor.yml = ..\appveyor.yml
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{AAFFF0EE-E658-4941-A954-031B39B9ACFC}"
+	ProjectSection(SolutionItems) = preProject
+		..\build\build.props = ..\build\build.props
+		..\build\GenerateAssemblyInfo.targets = ..\build\GenerateAssemblyInfo.targets
+		..\build\VersionUpdate.csproj = ..\build\VersionUpdate.csproj
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,6 +41,7 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{028E36DF-6514-471D-A7E5-4A45C03C30B8} = {17458FD1-4596-4123-BF96-4A665C3240C8}
+		{AAFFF0EE-E658-4941-A954-031B39B9ACFC} = {2C7B8EC7-5D0B-4EA4-91A4-69C2159FC0F9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C27D20B2-A1A1-4648-A126-641ECF925B98}

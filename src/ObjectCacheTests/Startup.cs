@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using ObjectCacheTests.Models;
+using P7Core.ObjectCaches;
 using P7Core.ObjectCaches.Extensions;
 
 namespace ObjectCacheTests
@@ -23,9 +25,16 @@ namespace ObjectCacheTests
             services.AddObjectCache();
             services.AddScoped<MyScopedStringContainer>();
             services.AddScoped<MySingletonStringContainer>();
-            
+
             services.AddScoped<MyScopedObjectTwo>();
             services.AddScoped<MyScopedObjectOne>();
+
+
+            services.AddScoped<MyScopedAutoPersonContainer>();
+            services.AddScoped<MySingletonAutoPersonContainer>();
+            services.AddTransient<ObjectCacheAllocator<MyScopedAutoPersonContainer, Person>>();
+            services.AddTransient<ObjectCacheAllocator<MySingletonAutoPersonContainer, Person>>();
+
             return services.BuildServiceProvider();
         }
 

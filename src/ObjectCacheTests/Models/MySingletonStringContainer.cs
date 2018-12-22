@@ -1,6 +1,6 @@
 using P7Core.ObjectCaches;
 
-namespace ObjectCacheTests
+namespace ObjectCacheTests.Models
 {
     public class MySingletonStringContainer
     {

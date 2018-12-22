@@ -1,5 +1,7 @@
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using ObjectCacheTests.Extensions;
+using ObjectCacheTests.Models;
 using Shouldly;
 
 namespace ObjectCacheTests

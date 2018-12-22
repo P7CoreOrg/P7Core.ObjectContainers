@@ -1,7 +1,7 @@
 using System;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace ObjectCacheTests
+namespace ObjectCacheTests.Extensions
 {
     public static class ServicesExtensions
     {
@@ -19,6 +19,5 @@ namespace ObjectCacheTests
                 throw;
             }
         }
-         
     }
 }

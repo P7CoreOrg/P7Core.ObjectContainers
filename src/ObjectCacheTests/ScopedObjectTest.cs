@@ -67,11 +67,11 @@ namespace ObjectCacheTests
         [TestMethod]
         public void Test_Simple_MyScopedObjectOne_MyScopedObjectTwo_ScopeIntegrity()
         {
-            var myScopedObjectOne_1 = ServiceScope.GetService<MyScopedObjectOne>();
-            var myScopedObjectTwo_1 = ServiceScope.GetService<MyScopedObjectTwo>();
+            var myScopedObjectOne = ServiceScope.GetService<MyScopedObjectOne>();
+            var myScopedObjectTwo = ServiceScope.GetService<MyScopedObjectTwo>();
 
-            myScopedObjectOne_1.Name = Guid.NewGuid().ToString();
-            myScopedObjectOne_1.Name.ShouldNotBe(myScopedObjectTwo_1.Name);
+            myScopedObjectOne.Name = Guid.NewGuid().ToString();
+            myScopedObjectOne.Name.ShouldNotBe(myScopedObjectTwo.Name);
         }
 
         /// <summary>
@@ -80,11 +80,11 @@ namespace ObjectCacheTests
         [TestMethod]
         public void Test_Simple_MyScopedObjectOne_MyScopedObjectTwo_SameContained_ScopeIntegrity()
         {
-            var myScopedObjectOne_1 = ServiceScope.GetService<MyScopedObjectOne>();
-            var myScopedObjectTwo_1 = ServiceScope.GetService<MyScopedObjectTwo>();
+            var myScopedObjectOne = ServiceScope.GetService<MyScopedObjectOne>();
+            var myScopedObjectTwo = ServiceScope.GetService<MyScopedObjectTwo>();
 
-            myScopedObjectOne_1.ScopedName = Guid.NewGuid().ToString();
-            myScopedObjectTwo_1.ScopedName.ShouldBe(myScopedObjectTwo_1.ScopedName);
+            myScopedObjectOne.ScopedName = Guid.NewGuid().ToString();
+            myScopedObjectTwo.ScopedName.ShouldBe(myScopedObjectTwo.ScopedName);
         }
 
     }

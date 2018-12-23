@@ -29,7 +29,7 @@ before_build:
 build:
   verbosity: minimal
 after_build:
-- cmd: dotnet pack  -c Release /p:PackageVersion=1.0.{build} 
+- cmd: dotnet pack  ./src/P7Core.ObjectCaches.sln -c Release /p:PackageVersion=1.0.{build} 
 artifacts:
 - path: '*.nupkg'
   name: nuget

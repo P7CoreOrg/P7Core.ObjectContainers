@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
-    <PackageLicenseFile>licenses\LICENSE.txt</PackageLicenseFile>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
   </PropertyGroup>
   <PropertyGroup>
     <IsPackable>true</IsPackable>
@@ -17,8 +17,7 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.2.0" />
   </ItemGroup>
   <ItemGroup>
-        <None Update="licenses\License.txt" Pack="true" PackagePath="">
-     
+        <None Update="LICENSE.txt" Pack="true" PackagePath="">
     </None>
   </ItemGroup>
  </Project>

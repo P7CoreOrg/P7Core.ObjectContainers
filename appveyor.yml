@@ -1,12 +1,7 @@
 version: 1.0.{build}
 skip_branch_with_pr: true
 image: Visual Studio 2017
-assembly_info:
-  patch: true
-  file: '**\AssemblyInfo.*'
-  assembly_version: '{version}'
-  assembly_file_version: '{version}'
-  assembly_informational_version: '{version}'
+ 
 dotnet_csproj:
   patch: true
   file: '**\*.csproj'

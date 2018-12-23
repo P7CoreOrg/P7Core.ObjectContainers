@@ -6,7 +6,7 @@
     <title>P7Core.ObjectCaches</title>
     <authors>Herb Stahl</authors>
     <owners>Herb Stahl</owners>
-    <licenseUrl>https://github.com/ghstahl/P7Core.ObjectCaches/blob/master/LICENSE</licenseUrl>
+    <license type="file">LICENSE.txt</license>
     <projectUrl>https://github.com/ghstahl/P7Core.ObjectCaches</projectUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>Singleton and Scoped Object Caches</description>
@@ -17,6 +17,6 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="License\*.*" target="License" />
+    <file src="License\*.*" target="" />
   </files>
 </package>

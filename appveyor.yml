@@ -24,11 +24,11 @@ before_build:
 - cmd: >-
     dotnet --version
 
-    dotnet restore ./src/P7Core.ObjectCaches.sln --verbosity m
+    dotnet restore ./src/P7Core.ObjectContainers.sln --verbosity m
 build:
   verbosity: minimal
 after_build:
-- cmd: dotnet pack  ./src/P7Core.ObjectCaches.sln -c Release /p:PackageVersion=%APPVEYOR_BUILD_VERSION% --include-symbols
+- cmd: dotnet pack  ./src/P7Core.ObjectContainers.sln -c Release /p:PackageVersion=%APPVEYOR_BUILD_VERSION% --include-symbols
 artifacts:
 - path: '**\*.nupkg'
   name: nuget

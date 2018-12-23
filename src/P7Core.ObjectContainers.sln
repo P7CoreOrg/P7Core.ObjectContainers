@@ -14,6 +14,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution", "Solution", "{2C
 		..\appveyor.yml = ..\appveyor.yml
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P7Core", "P7Core\P7Core.csproj", "{4E725D4F-41BB-42B5-B379-9259BC45C328}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P7CoreTests", "P7CoreTests\P7CoreTests.csproj", "{17CFA376-4106-4026-A3C1-BFB53EAF3332}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,12 +32,21 @@ Global
 		{028E36DF-6514-471D-A7E5-4A45C03C30B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{028E36DF-6514-471D-A7E5-4A45C03C30B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{028E36DF-6514-471D-A7E5-4A45C03C30B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E725D4F-41BB-42B5-B379-9259BC45C328}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E725D4F-41BB-42B5-B379-9259BC45C328}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E725D4F-41BB-42B5-B379-9259BC45C328}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E725D4F-41BB-42B5-B379-9259BC45C328}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17CFA376-4106-4026-A3C1-BFB53EAF3332}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17CFA376-4106-4026-A3C1-BFB53EAF3332}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17CFA376-4106-4026-A3C1-BFB53EAF3332}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17CFA376-4106-4026-A3C1-BFB53EAF3332}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{028E36DF-6514-471D-A7E5-4A45C03C30B8} = {17458FD1-4596-4123-BF96-4A665C3240C8}
+		{17CFA376-4106-4026-A3C1-BFB53EAF3332} = {17458FD1-4596-4123-BF96-4A665C3240C8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C27D20B2-A1A1-4648-A126-641ECF925B98}

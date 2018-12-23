@@ -31,5 +31,5 @@ build:
 after_build:
 - cmd: dotnet pack  ./src/P7Core.ObjectCaches.sln -c Release /p:PackageVersion=%APPVEYOR_BUILD_VERSION%
 artifacts:
-- path: '*.nupkg'
+- path: '**\*.nupkg'
   name: nuget

@@ -16,4 +16,7 @@
       <dependency id="Microsoft.Extensions.DependencyInjection.Abstractions" version="[2.2.0,3.0.0)" />
     </dependencies>
   </metadata>
+  <files>
+    <file src="License\*.*" target="License" />
+  </files>
 </package>

@@ -6,7 +6,7 @@
     <title>P7Core.ObjectCaches</title>
     <authors>Herb Stahl</authors>
     <owners>Herb Stahl</owners>
-    <license type="expression">MIT</license>
+    <licenseUrl>https://github.com/ghstahl/P7Core.ObjectCaches/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/ghstahl/P7Core.ObjectCaches</projectUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>Singleton and Scoped Object Caches</description>
